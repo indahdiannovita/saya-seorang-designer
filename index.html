@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Designer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">MODA<span>STUDIO</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Koleksi</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>Elegansi Dalam Setiap Jahitan</h1>
+            <p>Koleksi Eksklusif Desainer Busana Modern</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="gallery" class="section">
+            <h2 class="section-title">Koleksi Pilihan</h2>
+            
+            <div class="filter-menu">
+                <button class="filter-btn active" onclick="filterSelection('all')">Semua Koleksi</button>
+                <button class="filter-btn" onclick="filterSelection('pengantin')">Baju Pengantin</button>
+                <button class="filter-btn" onclick="filterSelection('main')">Baju Main</button>
+                <button class="filter-btn" onclick="filterSelection('pantai')">Baju Pantai</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="column pengantin show">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1594553813419-42b4394e7b5b?auto=format&fit=crop&w=500&q=80" alt="Baju Pengantin">
+                        <h4>White Silk Wedding</h4>
+                    </div>
+                </div>
+
+                <div class="column main show">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=80" alt="Baju Main">
+                        <h4>Street Casual Look</h4>
+                    </div>
+                </div>
+
+                <div class="column pantai show">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&w=500&q=80" alt="Baju Pantai">
+                        <h4>Summer Breeze Dress</h4>
+                    </div>
+                </div>
+
+                <div class="column pengantin show">
+                    <div class="content">
+                        <img src="https://images.unsplash.com/photo-1549416878-b9ca35c2d47b?auto=format&fit=crop&w=500&q=80" alt="Baju Pengantin">
+                        <h4>Royal Lace Gown</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>Konsultasi Desain: <strong>@ModaStudio_Design</strong></p>
+        <p>&copy; 2026 Fashion Portfolio. Dibuat dengan Gaya.</p>
+    </footer>
+
+    <script>
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                x[i].classList.remove("show");
+                if (x[i].className.indexOf(c) > -1) {
+                    x[i].classList.add("show");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

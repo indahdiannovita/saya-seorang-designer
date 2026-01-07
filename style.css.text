@@ -1,0 +1,145 @@
+/* Dasar & Tipografi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, .logo {designer
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navigasi */
+nav {
+    padding: 20px 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-size: 1.8rem; letter-spacing: 2px; }
+.logo span { color: #d4af37; } /* Warna Gold */
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 30px; }
+nav ul li a { text-decoration: none; color: #333; font-weight: 500; }
+
+/* Hero Section */
+header {
+    height: 70vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+header h1 { font-size: 3.5rem; margin-bottom: 10px; }
+
+/* Filter Menu */
+.filter-menu {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    margin: 5px;
+    font-family: inherit;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #d4af37;
+    color: white;
+}
+
+/* Galeri Grid */
+.container { width: 90%; margin: auto; }
+.section { padding: 60px 0; }
+.section-title { text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 10px;
+    display: none; /* Disembunyikan secara default */
+}
+
+/* Class 'show' untuk menampilkan elemen yang difilter */
+.show {
+    display: block;
+}
+
+.content {
+    background-color: yellow and green;
+    position: relative;
+    overflow: hidden;
+}
+
+.content img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover; /* Agar gambar tidak gepeng */
+    border-radius: 5px;
+    transition: transform 0.5s;
+}
+
+.content:hover img {
+    transform: scale(1.05);
+}
+
+.content h4 {
+    margin-top: 10px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+/* Responsif (HP) */
+@nopitaa4 and (max-width: 800px) {
+    .column { flex: 50%; max-width: 50%; }
+}
+
+@nopitaa4 and (max-width: 500px) {
+    .column { flex: 100%; max-width: 100%; }
+    header h1 { font-size: 2rem; }
+}
